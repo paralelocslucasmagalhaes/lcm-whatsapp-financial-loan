@@ -1,0 +1,56 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+
+        {
+            "name": "Financial Loan",
+            "type": "python",
+            "request": "attach",
+            "pathMappings": [
+                {
+                    "localRoot": "${workspaceFolder}/fastapi-project/app",
+                    "remoteRoot": "/usr/src/app"
+                }
+            ],
+            "connect": {
+                "host": "localhost",
+                "port": 5678
+            },
+            // "module": "uvicorn",
+            // "args": [
+            //     "src.main:app",
+            //     "--reload"
+            // ],
+            // "jinja": true,
+            // "justMyCode": true,
+
+        },
+        {
+            "name": "Chat Service",
+            "type": "python",
+            "request": "attach",
+            "pathMappings": [
+                {
+                    "localRoot": "${workspaceFolder}/chat-service/app",
+                    "remoteRoot": "/usr/src/app"
+                }
+            ],
+            "connect": {
+                "host": "localhost",
+                "port": 5678
+            },
+            // "module": "uvicorn",
+            // "args": [
+            //     "src.main:app",
+            //     "--reload"
+            // ],
+            // "jinja": true,
+            // "justMyCode": true,
+
+        }
+
+    ]
+}

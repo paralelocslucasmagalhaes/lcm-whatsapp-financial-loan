@@ -1,0 +1,17 @@
+fastapi
+python-multipart
+uvicorn
+pydantic
+sqlalchemy
+databases
+python-dotenv
+opentelemetry-api>=1.21.0,<2.0.0
+opentelemetry-propagator-gcp>=1.6.0,<2.0.0
+opentelemetry-sdk>=1.21.0,<2.0.0
+opentelemetry-instrumentation-fastapi
+opentelemetry-exporter-gcp-trace>=1.6.0,<2.0.0
+google-cloud-dialogflow-cx
+aiohttp
+aiodns
+twilio
+google-cloud-storage

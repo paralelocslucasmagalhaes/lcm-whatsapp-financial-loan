@@ -1,0 +1,20 @@
+# version: '3'
+
+services:
+  chat-service:
+    build:       
+      context: ./app/
+      target: debug
+    command: ["sh", "-c","python /tmp/debugpy --wait-for-client --listen 0.0.0.0:5678 /usr/local/bin/uvicorn main:app --host 0.0.0.0 --reload"]
+    ports:
+      - "8080:8000"
+      - 5678:5678
+    # depends_on:
+    #   - db-usuario
+    volumes:
+      - ./app/:/usr/src/app      
+      - ${HOME}/.config/gcloud/:/credentials
+    environment:
+      - SERVICE=db_admin
+      - GOOGLE_APPLICATION_CREDENTIALS=/credentials/application_default_credentials.json
+      - CLOUD_RUN_HASH=e6aysp7qoq-uc.a.run.app
